@@ -1,7 +1,5 @@
 pyMSA is a simple email MSA server made in Python!
 
-run from command line with "py pyMSA.py"
-
 the server runs indefinitely awaiting connection requests from MUA clients on localhost
 once a connection to an MUA has been established, it handles the incoming data from a
 new thread, enabling the handling of multiple connections simultaneously.
