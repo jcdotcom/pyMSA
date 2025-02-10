@@ -1,27 +1,3 @@
-"""
-    Project 1: Python MSA Server
-    CIS 457 - Winter 2025
-    Jaycee Waycaster
-
-    Requirements:
-        Verify recipient address    -> ( lines 60 - 68 )
-            TLD
-            contains one @
-            Domain name not empty
-            Domain name has no numbers
-            Username is not empty
-
-        MSA must respond with 550 status -> ( line 70 )
-
-        Subject line is not blank   ->  ( line 89 )
-
-        Verify less than five recipient ->  ( line 52 )
-
-        Print the entire message body to stdout -> ( lines 42 & 78 )
-        
-        Code shall be able to consume message body beyond buffer size   ->  ( lines 75 - 83 ) tested with lorem ipsum * 1000 paragraphs
-"""
-
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 from threading import Thread
 from time import sleep
