@@ -1,4 +1,4 @@
-pymail is a simple MSA server made in Python!
+pyMSA is a simple email MSA server made in Python!
 
 run from command line with "py pyMSA.py"
 
