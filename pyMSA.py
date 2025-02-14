@@ -46,7 +46,7 @@ def interactor(connectionSocket, addr):
                     break
             elif("DATA" in text):
                 connectionSocket.sendall("354 OK\r\n".encode())
-                print(f"   Receiving data...\n")
+                print(f"   Receiving data...\n")                        # Receiving Message Body
                 while True:
                     try:
                         text = connectionSocket.recv(1024).decode()
@@ -60,7 +60,7 @@ def interactor(connectionSocket, addr):
                 for line in datas:
                     if(line.startswith("Subject: ")):
                         response_msg = "250 OK"                                    # Checking for empty subject line
-                    if(line.startswith("Content-Type: multipart/mixed;")):
+                    if(line.startswith("Content-Type: multipart/mixed;")):          # Checking for attachments in message
                         boundary = line.split("boundary=")[1].replace("-","").replace("\"","")
                         parts = data.split(boundary)[2:-1]
                         if(len(parts)>6):
